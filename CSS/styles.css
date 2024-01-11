@@ -1,0 +1,40 @@
+/* Selector por elemento */
+p {
+    text-align: center;
+    color: red;
+}
+
+/* Selector por id */
+#par1 {
+    text-align: left;
+    color: blue;
+}
+
+/* Selector por clase */
+.right {
+    text-align: right;
+    color: green;
+}
+
+/* Selector por clase */
+.right2 {
+    text-align: right;
+    color: green;
+}
+
+.large2 {
+    font-size: 30px;
+}
+
+/* El selector universal */
+
+* {
+    text-align: center;
+    color: blue;
+}
+
+/* Agrupar selectores */
+h1, h2, p{
+    text-align: center;
+    color: red;
+  }
