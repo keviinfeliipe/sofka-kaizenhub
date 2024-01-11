@@ -1,0 +1,59 @@
+/* background-color
+Esta propiedad te permite poner un color de fondo */
+body {
+    background-color: blue;
+}
+
+/* background-image
+Esta propiedad te permite poner una imagen de fondo */
+
+body {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/bg-gradient-1.JPG");
+}
+
+/* background-repeat
+Por defecto la propiedad background-image hace que la imagen se repita horizontal y verticalmente.
+Con background-repeat podemos controlar como la repetimos. */
+
+body {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/bg-gradient-1.JPG");
+    background-repeat: repeat-x;
+}
+
+/* También podemos hacer que no se repita */
+
+body {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/bg-gradient-1.JPG");
+    background-repeat: no-repeat;
+}
+
+/* background-position
+  Especifica la posición de la imagen de fondo */
+body {
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/kikopalomares.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+/* background-attachment
+Especifica si la imagen debería ser fija o hacer scroll con el resto de la página */
+
+body{
+    background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/kikopalomares.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+  }
+
+  /* background
+  Con la propiedad background se pueden unir todas las anteriores en una sola. En este orden:
+  
+  background-color
+  background-image
+  background-repeat
+  background-attachment
+  background-position */
+
+  body{
+    background: #000 url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/kikopalomares.jpg") no-repeat right top;
+  }
