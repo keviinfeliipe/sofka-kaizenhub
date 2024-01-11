@@ -1,0 +1,126 @@
+/* Border Style
+La propiedad border-style especifica que clase de borde mostrar */
+
+.dotted {
+    border-style: dotted;
+}
+
+.dashed {
+    border-style: dashed;
+}
+
+.solid {
+    border-style: solid;
+}
+
+.double {
+    border-style: double;
+}
+
+.groove {
+    border-style: groove;
+}
+
+.ridge {
+    border-style: ridge;
+}
+
+.inset {
+    border-style: inset;
+}
+
+.outset {
+    border-style: outset;
+}
+
+.none {
+    border-style: none;
+}
+
+.hidden {
+    border-style: hidden;
+}
+
+.mix {
+    border-style: dotted dashed solid double;
+}
+
+/* Border width
+La propiedad border-width especifica la anchura del borde. */
+
+.one {
+    border-style: solid;
+    border-width: 5px;
+}
+
+.two {
+    border-style: solid;
+    border-width: medium;
+}
+
+.three {
+    border-style: dotted;
+    border-width: 2px;
+}
+
+.four {
+    border-style: dotted;
+    border-width: thick;
+}
+
+.five {
+    border-style: double;
+    border-width: 15px;
+}
+
+.six {
+    border-style: double;
+    border-width: thick;
+}
+
+/* Border color
+Con la propiedad border color podemos cambiar el color a los bordes. */
+
+.one2 {
+    border-style: solid;
+    border-color: red;
+}
+
+.two2 {
+    border-style: solid;
+    border-color: green;
+}
+
+.three2 {
+    border-style: dotted;
+    border-color: blue;
+}
+
+/* Propiedad border
+  Con la propiedad border podemos englobar todas las anteriores en una sola. */
+
+.propiedad {
+    border: 5px solid red;
+}
+
+/* Border radius
+Con la propiedad border-radius podemos redondear los bordes. */
+
+.normal {
+    border: 2px solid red;
+  }
+  
+  .round1 {
+    border: 2px solid red;
+    border-radius: 5px;
+  }
+  
+  .round2 {
+    border: 2px solid red;
+    border-radius: 8px;
+  }
+  
+  .round3 {
+    border: 2px solid red;
+    border-radius: 12px;
+  }
