@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="https://blog.hubspot.es/hubfs/media/imagenhtmlejemplo.png">
+
+    <!-- 
+        Atributo alt. Este atributo define una descripción textual de la imagen que se pretende insertar para aquellas situaciones
+         en que la imagen no pueda ser mostrada o tarde demasiado en mostrarse por una lenta conexión. 
+    -->
+    <img src="images/imagen.png"
+        alt="Esta es una descripcion alternativa de la imagen para cuando no se pueda mostrar"><br>
+
+
+    <!--
+         Para redimensionar el tamaño de una imagen en HTML tenemos disponibles las etiquetas width (ancho) y height (alto) que permiten 
+        especificar la anchura y altura de la imagen. 
+    -->
+
+    <img src="images/imagen.png" alt="Esta es una descripcion alternativa de la imagen para cuando no se pueda mostrar"
+        width="480" height="380" /><br>
+
+    <!-- 
+        La etiqueta <img> también soporta el atributo align que puede tener los valores left (izquierda) y right (derecha). 
+    -->
+    <img src="https://blog.hubspot.es/hubfs/media/imagenhtmlejemplo.png"
+        alt="Esta es una descripcion alternativa de la imagen para cuando no se pueda mostrar" width="150" height="150"
+        align="right" /><br>
+    <img src="https://blog.hubspot.es/hubfs/media/imagenhtmlejemplo.png"
+        alt="Esta es una descripcion alternativa de la imagen para cuando no se pueda mostrar" width="150" height="150"
+        align="left" /><br>
+
+
+    <!-- Atributos de la etiqueta <audio> -->
+
+    <!-- Autoplay es un atributo booleano. Está o no está, no necesita tener un valor asociado. Este atributo reproduce automáticamente el archivo. -->
+    <audio autoplay src="mi-archivo-de-audio.mp3"></audio><br>
+
+    <!-- Atributo loop, como su nombre indica, nos permite indicar si queremos reproducir el archivo en bucle. -->
+    <audio src="mi-archivo-de-audio.mp3" autoplay loop></audio><br>
+
+    <!-- Preload sirve para precargar tus archivos de audio. También existe el booleano autobuffer, que estaría genial si no fuese porque Safari hace la 
+        precarga, exista o no el atributo autobuffer. Así que hubo que introducir Preload, que no es booleano y tiene tres valores: media, auto y none. 
+        Si no quieres que tus archivos de audio se precarguen, añádeles preload= "none". La precarga está bien si tienes uno o dos archivos, 
+        pero si tienes muchos va a ralentizar mucho la carga de tu página. -->
+    <audio src="mi-archivo-de-audio.mp3" preload="none"></audio><br>
+
+    <!-- Controls es un atributo booleano que nos permite disponer de un panel de control nativo de cada navegador para, obviamente, controlar la reproducción. -->
+    <audio id="mireproductor" src="mi-archivo-de-audio.mp3"></audio><br>
+    <div>
+        <button onclick="document.getElementById('player').play()">Play</button>
+        <button onclick="document.getElementById('player').pause()">Pausa</button>
+        <button onclick="document.getElementById('player').load()">Stop</button>
+        <button onclick="document.getElementById('player').volume += .1">Subir volumen</button>
+        <button onclick="document.getElementById('player').volume -= .1">Bajar volumen</button>
+    </div><br>
+    <!-- hay una manera genial de utilizar la etiqueta audio sin tener que elegir un sólo formato de archivo. En lugar de sólo utilizar el atributo src en 
+        la etiqueta <audio> podemos especificar múltiples formatos de archivo de distintas fuentes -->
+    <audio controls>
+        <source src="mi-archivo-de-audio.ogg" type="audio/ogg">
+        <source src="mi-archivo-de-audio.mp3" type="audio/mpeg">
+        <source src="mi-archivo-de-audio.wav" type="audio/wav">
+    </audio><br>
+
+    <!-- Atributos de la etiqueta <video> -->
+
+    <video src="mivideo.webm" controls>
+        <p>Su navegador no soporta vídeos HTML5.</p>
+    </video><br>
+
+    <!-- Fichero del vídeo: Para poder indicar dónde está el fichero que contiene el vídeo deberemos de utilizar el atributo src. 
+        Este atributo recibirá como valor el nombre del fichero. -->
+
+    <video src="mivideo.webm" controls>
+        <p>Su navegador no soporta vídeos HTML5.</p>
+    </video><br>
+
+    <!-- Ancho y alto del vídeo: Aunque como todo elemento HTML podemos modificar la apariencia mediante el lenguaje CSS, 
+        el elemento vídeo nos ofrece los atributos widht y height para poder definir el ancho y alto del vídeo respetivamente. -->
+    <video src="mivideo.webm" width="600" height="400" controls>
+        <p>Su navegador no soporta vídeos HTML5.</p>
+    </video><br>
+
+    <!-- Inicio automático del vídeo: Si queremos que el vídeo se inicie de forma automática una vez que se carge el documento HTML5 deberemos 
+        de utilizar el atributo autoplay. -->
+    <video src="mivideo.webm" autoplay controls>
+        <p>Su navegador no soporta vídeos HTML5.</p>
+    </video><br>
+
+    <!-- Vídeo en bucle: En el caso de que queramos que el vídeo se reproduzca en bulce una y otra vez usaremos el atributo loop. -->
+    <video src="mivideo.webm" autoplay loop>
+        <p>Su navegador no soporta vídeos HTML5.</p>
+    </video><br>
+
+    <!-- Vídeo sin sonido: Otra opción es que el vídeo se ejecute sin sonido. Esto lo conseguimos apoyándonos en el atributo muted. -->
+    <video src="mivideo.webm" autoplay muted>
+        <p>Su navegador no soporta vídeos HTML5.</p>
+    </video><br>
+
+    <!-- Cartel del vídeo: Antes de que se inicie el vídeo podemos poner una imagen de muestra (o cartel). Para ello vamos a utilizar el 
+        atributo poster. El atributo poster recibirá una URL con el nombre del fichero que queremos utilizar como cartel del vídeo. -->
+
+    <video src="mivideo.webm" controls poster="mivideo.png">
+        <p>Su navegador no soporta vídeos HTML5.</p>
+    </video><br>
+
+
+    <!-- Múltiples orígenes y formatos del vídeo -->
+    <video controls>
+        <source src="mivideo.mp4" type="video/mp4" />
+        <source src="mivideo.webm" type="video/webm" />
+        <p>Su navegador no soporta vídeos HTML5.</p>
+    </video><br>
+</body>
+
+</html>
